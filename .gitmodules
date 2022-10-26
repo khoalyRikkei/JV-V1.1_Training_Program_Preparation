@@ -1,0 +1,6 @@
+[submodule "MD1-HEART-7X6"]
+	path = MD1-HEART-7X6
+	url = https://github.com/nguyendongminhtri/MD1-HEART-7X7.git
+[submodule "MD1-HEART-7X7"]
+	path = MD1-HEART-7X7
+	url = https://github.com/nguyendongminhtri/MD1-HEART-7X7.git
