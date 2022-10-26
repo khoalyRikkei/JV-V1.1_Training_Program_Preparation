@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài tập 2 - Clone Facebook Lite</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+            integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+            crossorigin="anonymous"
+            referrerpolicy="no-referrer"
+        />
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                vertical-align: middle;
+                text-decoration: none;
+            }
+
+            /* header */
+            header {
+                background-color: #ffffff;
+                height: 60px;
+                padding: 8px 0;
+                min-width: 1100px;
+                position: fixed;
+                width: 100%;
+                z-index: 10;
+                margin: 0 5px;
+            }
+            nav div {
+                display: inline-block;
+                vertical-align: middle;
+            }
+            nav ul li {
+                list-style: none;
+                display: inline-block;
+                border-left: 1px solid grey;
+                padding: 0 10px;
+            }
+
+            ul li a {
+                padding: 0 5px;
+                text-decoration: none;
+                color: black;
+                margin: 0 auto;
+            }
+            .search {
+                border: 1px solid grey;
+                padding: 2px;
+                border-radius: 5px;
+                width: 250px;
+                margin: 0 5px;
+            }
+            .search input {
+                width: 90%;
+                border: none;
+                outline: none;
+            }
+
+            /*main */
+            main {
+                display: flex;
+            }
+
+            .float-left {
+                float: left;
+                width: 50%;
+            }
+            .float-right {
+                float: right;
+                width: 50%;
+                text-align: right;
+            }
+            /* aside */
+            aside {
+                position: relative;
+                top: 60px;
+                width: 20%;
+                height: 1000px;
+                background-color: #f0f2f5;
+            }
+            aside ul li {
+                padding: 20px;
+            }
+            aside ul li:hover {
+                border-left: 3px solid rgba(17, 17, 77, 0.829);
+                background-color: #e4e6e9;
+            }
+            .active {
+                border-left: 3px solid rgba(17, 17, 77, 0.829);
+                background-color: #e4e6e9;
+            }
+            /* mmain-content fb */
+            .main-content {
+                position: relative;
+                top: 60px;
+                flex: auto;
+                background-color: #f0f2f5;
+                height: 1000px;
+                padding: 15px;
+            }
+            section {
+                background-color: #ffffff;
+                min-height: 50px;
+                border-radius: 5px;
+                margin-bottom: 15px;
+
+                padding: 5px;
+            }
+            .post-status {
+                padding: 10px;
+                border-bottom: 2px solid rgba(128, 128, 128, 0.63);
+            }
+            .post-status input {
+                margin: 5px;
+                outline: none;
+                border: none;
+                height: 30px;
+                padding: 5px;
+                width: 90%;
+            }
+            .add-status {
+                display: flex;
+                justify-content: center;
+            }
+            .add-status-item {
+                width: 33%;
+                margin: 10px;
+                align-self: center;
+            }
+            .add-status-item-right {
+                margin: 10px;
+                align-self: center;
+            }
+            .side-right {
+                padding: 10px;
+            }
+            .section-title {
+                display: flex;
+            }
+            .title-right {
+                width: 50%;
+                text-align: right;
+            }
+            .title-left {
+                font-size: 0.9em;
+                width: 50%;
+                text-align: left;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="float-left">
+                    <div class="logo">
+                        <img
+                            src="images/fb_icon.png"
+                            alt="logo-fb"
+                            width="40"
+                        />
+                    </div>
+                    <div class="search">
+                        <input type="search" />
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </div>
+                </div>
+                <div class="float-right">
+                    <ul>
+                        <li style="border: none">
+                            <a href="/"
+                                ><img
+                                    src="images/avatar.png"
+                                    alt="avatar"
+                                    width="40"
+                                />
+                                <span>Nguyễn Văn Tèo</span></a
+                            >
+                        </li>
+                        <li>
+                            <a href="/">Create</a>
+                        </li>
+                        <li><a href="/">Home</a></li>
+                        <li style="border: none">
+                            <a href="/"
+                                ><img src="images/msg_icon.png" width="20"
+                            /></a>
+                            <a href="/"
+                                ><img
+                                    src="images/alert_icon.jpg"
+                                    width="35" /></a
+                            ><a
+                                ><img
+                                    src="images/add-friend-icon.png"
+                                    width="20" /></a
+                            ><a href="/"
+                                ><img src="images/info-icon.png" width="20"
+                            /></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <aside>
+                <ul>
+                    <li class="active">
+                        <i class="fa-regular fa-newspaper"></i> News Feed
+                    </li>
+                    <li><i class="fa-regular fa-envelope"></i> Messages</li>
+                    <li><i class="fa-solid fa-tv"></i> Watch</li>
+                    <li><i class="fa-solid fa-shop"></i> Market Place</li>
+                </ul>
+            </aside>
+            <div class="main-content">
+                <section class="post-status">
+                    <div class="post-status">
+                        <img src="images/avatar.png" alt="avatar" width="40" />
+                        <input
+                            type="text"
+                            placeholder="What's on your mind, Tèo?"
+                        />
+                    </div>
+                    <div class="add-status">
+                        <div class="add-status-item">
+                            <i
+                                class="fa-regular fa-image"
+                                style="color: blue"
+                            ></i>
+                            Photo/Video
+                        </div>
+                        <div class="add-status-item">
+                            <i
+                                class="fa-solid fa-user-tag"
+                                style="color: orange"
+                            ></i>
+                            Tag Friends
+                        </div>
+                        <div class="add-status-item">
+                            <i
+                                class="fa-solid fa-face-smile-beam"
+                                style="color: orange"
+                            ></i>
+                            Feeling/Active
+                        </div>
+                        <div class="add-status-item-right">
+                            <i
+                                class="fa-solid fa-ellipsis"
+                                style="vertical-align: middle"
+                            ></i>
+                        </div>
+                    </div>
+                </section>
+                <section></section>
+                <section></section>
+                <section></section>
+            </div>
+            <aside class="side-right">
+                <section>
+                    <div class="section-title">
+                        <h5 class="title-left">Stories</h5>
+                        <a href="/" class="title-right">See all</a>
+                    </div>
+
+                    <div class="section-content"></div>
+                </section>
+                <section>
+                    <div class="section-title">
+                        <h5>Recently Viewed</h5>
+                        <div class="section-content"></div>
+                    </div>
+                </section>
+                <section>
+                    <div class="section-title">
+                        <h5 class="title-left">Sponsored</h5>
+                        <a href="/" class="title-right">Create Ad</a>
+                    </div>
+
+                    <div class="section-content"></div>
+                </section>
+                <section></section>
+            </aside>
+        </main>
+    </body>
+</html>
