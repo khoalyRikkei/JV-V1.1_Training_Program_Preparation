@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bài tập trên lớp - Tạo bảng đơn giản</title>
+        <style>
+            body {
+                width: 1000px;
+                font-family: sans-serif;
+            }
+            h1 {
+                text-transform: uppercase;
+                color: blue;
+                text-align: center;
+            }
+            table,
+            td,
+            th {
+                border-collapse: collapse;
+                border: 2px solid grey;
+                text-align: center;
+                padding: 5px 10px;
+                height: 20px;
+                clear: both;
+                background-color: rgba(247, 212, 217, 0.322);
+            }
+
+            table {
+                width: 100%;
+            }
+            .info {
+                width: 100%;
+                color: blue;
+            }
+            .col-right {
+                width: 30%;
+                float: right;
+                text-align: right;
+            }
+            .col-left {
+                width: 30%;
+                float: left;
+            }
+            .text-yellow {
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body>
+        <button><a href="/">Home</a></button><br />
+        <h1>Thời khóa biểu</h1>
+        <div class="info">
+            <div class="col-left">
+                <p>Lớp: T1005</p>
+                <p>Giáo viên: KhoaLY</p>
+                <p>Phòng: Class03</p>
+            </div>
+            <div class="col-right">
+                <p>Thời gian: 13h00 - 17h00</p>
+                <p>Ngày học: Thứ 3, 5, 7</p>
+            </div>
+        </div>
+        <table>
+            <tr>
+                <th colspan="3"></th>
+                <th class="text-yellow">Thứ 3</th>
+                <th class="text-yellow">Thứ 5</th>
+                <th class="text-yellow">Thứ 7</th>
+            </tr>
+            <tr style="background-color: orange">
+                <th>Tuần</th>
+                <th>Ngày bắt đầu</th>
+                <th>Ngày kết thúc</th>
+                <th colspan="3">Môn học</th>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>24/10/2022</td>
+                <td>29/10/2022</td>
+                <td>HTML- Giới thiệu</td>
+                <td>HTML- Các thẻ cơ bản</td>
+                <td>HTML- Các thẻ ngữ nghĩa</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>31/10/2022</td>
+                <td>05/11/2022</td>
+                <td>CSS- Giới thiệu</td>
+                <td>CSS- Làm việc với CSS</td>
+                <td>CSS- Responsive Design</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+    </body>
+</html>
