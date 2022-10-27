@@ -1,0 +1,132 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --main-color: rgb(99, 54, 54);
+    --light-color: rgba(116, 59, 59, 0.808);
+    --primary: #0080ff;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background-color: rgba(37, 37, 37, 0.534);
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    position: relative;
+    min-width: 300px;
+}
+header i {
+    margin: 0 10px;
+}
+
+main {
+    min-height: 1500px;
+}
+
+/* Banner */
+#banner {
+    height: 400px;
+    text-align: center;
+    position: relative;
+}
+.content {
+    width: 100%;
+    position: absolute;
+    top: 40%;
+    text-align: center;
+}
+.content-title {
+    color: var(--main-color);
+    margin: 15px 0;
+    font-size: 2em;
+}
+.content-description {
+    color: var(--light-color);
+}
+#banner button {
+    border: 2px solid var(--light-color);
+    padding: 5px 30px;
+    border-radius: 5px;
+    background-color: var(--primary);
+    color: white;
+    margin: 15px;
+}
+#album-1,
+#album-2 {
+    display: flex;
+    flex-wrap: wrap;
+}
+.container-image {
+    height: 300px;
+    margin: 10px 0;
+    width: 100%;
+    min-width: 300px;
+    padding: 0 1%;
+    position: relative;
+    object-fit: contain;
+}
+.container-image .image p {
+    position: absolute;
+    top: 30%;
+    left: 25%;
+    font-size: 1.2em;
+    color: white;
+}
+.container-image .time-update-image {
+    position: absolute;
+    right: 40px;
+    bottom: 30%;
+    font-weight: 600;
+    color: var(--light-color);
+}
+.container-image .image-footer {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+}
+.image {
+    width: 100%;
+    background-color: rgb(61, 60, 59);
+    height: 200px;
+    font-size: 1.5em;
+    margin: 0 auto;
+}
+.image-content {
+    padding: 10px;
+    border-left: 1px solid var(--main-color);
+    border-right: 1px solid var(--main-color);
+    border-bottom: 1px solid var(--main-color);
+    box-shadow: 1px 1px var(--light-color);
+    height: 100px;
+}
+.image-footer button {
+    padding: 5px;
+}
+.container {
+    padding: 0 5%;
+    min-width: 300px;
+}
+@media only screen and (min-width: 768px) {
+    .container-image {
+        width: 50%;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .container-image {
+        width: 33.33%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .container-image {
+        width: 25%;
+    }
+}

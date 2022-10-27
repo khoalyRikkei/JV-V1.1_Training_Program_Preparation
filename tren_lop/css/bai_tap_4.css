@@ -1,0 +1,138 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+:root {
+    --color-1: #b2b2b2;
+    --color-2: #868686;
+    --color-hover: #1e1e1e;
+    --color-card: #181818;
+    --color-nav: #101010;
+}
+body {
+    display: flex;
+    font-family: "Courier New", Courier, monospace;
+    width: 100%;
+    height: max-content;
+    min-width: 768px;
+}
+a {
+    text-decoration: none;
+}
+/* ---------- nav ---------- */
+nav#navbar-left {
+    width: 20%;
+    min-width: 200px;
+    max-width: 500px;
+    min-height: 100%;
+    background-color: black;
+}
+.logo {
+    padding: 20px;
+    text-align: center;
+    color: white;
+}
+nav#navbar-left > ul > li {
+    padding: 20px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+nav#navbar-left > ul > li a {
+    color: var(--color-1);
+    font-weight: 900;
+    font-size: 1.2em;
+}
+nav#navbar-left > ul > li:hover {
+    background-color: var(--color-hover);
+}
+
+/* ---------- main ---------- */
+main {
+    flex: 1;
+    height: max-content;
+    background-color: var(--color-hover);
+    font-family: sans-serif;
+    object-fit: cover;
+}
+.container {
+    width: 100%;
+    padding: 80px 1%;
+}
+
+/* ---------- footer ---------- */
+#navbar-top {
+    width: 80%;
+    min-width: 700px;
+    height: 60px;
+    background-color: var(--color-nav);
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row-reverse;
+    font-family: "Courier New", Courier, monospace;
+}
+#navbar-top ul {
+    text-align: right;
+}
+#navbar-top ul li {
+    padding: 20px;
+    display: inline;
+}
+#navbar-top ul li:hover {
+    background-color: var(--color-hover);
+}
+#navbar-top > ul > li a {
+    color: var(--color-1);
+    font-weight: 900;
+    font-size: 1.2em;
+}
+
+.main-title {
+    font-size: 2em;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    min-width: 200px;
+    max-width: 250px;
+    height: 300px;
+    background-color: var(--color-card);
+    border-radius: 8px;
+    padding: 5%;
+    margin: 0 10px;
+}
+.card-img {
+    width: 100%;
+    height: 200px;
+    background-color: rgb(27, 71, 57);
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-image: url("../images/taylor.png");
+    background-size: cover;
+}
+.card-title {
+    color: white;
+    margin: 5px 0;
+    font-weight: 600;
+}
+.card-description {
+    font-weight: 600;
+    font-size: 0.9em;
+    color: var(--color-2);
+}
+.row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.col {
+    margin: 10px 0;
+}

@@ -12,147 +12,7 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"
         />
-        <style>
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-                vertical-align: middle;
-                text-decoration: none;
-            }
-
-            /* header */
-            header {
-                background-color: #ffffff;
-                height: 60px;
-                padding: 8px 0;
-                min-width: 1100px;
-                position: fixed;
-                width: 100%;
-                z-index: 10;
-                margin: 0 5px;
-            }
-            nav div {
-                display: inline-block;
-                vertical-align: middle;
-            }
-            nav ul li {
-                list-style: none;
-                display: inline-block;
-                border-left: 1px solid grey;
-                padding: 0 10px;
-            }
-
-            ul li a {
-                padding: 0 5px;
-                text-decoration: none;
-                color: black;
-                margin: 0 auto;
-            }
-            .search {
-                border: 1px solid grey;
-                padding: 2px;
-                border-radius: 5px;
-                width: 250px;
-                margin: 0 5px;
-            }
-            .search input {
-                width: 90%;
-                border: none;
-                outline: none;
-            }
-
-            /*main */
-            main {
-                display: flex;
-            }
-
-            .float-left {
-                float: left;
-                width: 50%;
-            }
-            .float-right {
-                float: right;
-                width: 50%;
-                text-align: right;
-            }
-            /* aside */
-            aside {
-                position: relative;
-                top: 60px;
-                width: 20%;
-                height: 1000px;
-                background-color: #f0f2f5;
-            }
-            aside ul li {
-                padding: 20px;
-            }
-            aside ul li:hover {
-                border-left: 3px solid rgba(17, 17, 77, 0.829);
-                background-color: #e4e6e9;
-            }
-            .active {
-                border-left: 3px solid rgba(17, 17, 77, 0.829);
-                background-color: #e4e6e9;
-            }
-            /* mmain-content fb */
-            .main-content {
-                position: relative;
-                top: 60px;
-                flex: auto;
-                background-color: #f0f2f5;
-                height: 1000px;
-                padding: 15px;
-            }
-            section {
-                background-color: #ffffff;
-                min-height: 50px;
-                border-radius: 5px;
-                margin-bottom: 15px;
-
-                padding: 5px;
-            }
-            .post-status {
-                padding: 10px;
-                border-bottom: 2px solid rgba(128, 128, 128, 0.63);
-            }
-            .post-status input {
-                margin: 5px;
-                outline: none;
-                border: none;
-                height: 30px;
-                padding: 5px;
-                width: 90%;
-            }
-            .add-status {
-                display: flex;
-                justify-content: center;
-            }
-            .add-status-item {
-                width: 33%;
-                margin: 10px;
-                align-self: center;
-            }
-            .add-status-item-right {
-                margin: 10px;
-                align-self: center;
-            }
-            .side-right {
-                padding: 10px;
-            }
-            .section-title {
-                display: flex;
-            }
-            .title-right {
-                width: 50%;
-                text-align: right;
-            }
-            .title-left {
-                font-size: 0.9em;
-                width: 50%;
-                text-align: left;
-            }
-        </style>
+        <link rel="stylesheet" href="./css/bai_tap_2.css" />
     </head>
     <body>
         <header>
@@ -166,39 +26,48 @@
                         />
                     </div>
                     <div class="search">
-                        <input type="search" />
+                        <input type="search" placeholder="Search ..." />
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </div>
                 </div>
                 <div class="float-right">
                     <ul>
                         <li style="border: none">
-                            <a href="/"
+                            <a href="/" class="name-user"
                                 ><img
                                     src="images/avatar.png"
                                     alt="avatar"
                                     width="40"
                                 />
-                                <span>Nguyễn Văn Tèo</span></a
+                                Nguyễn Văn Tèo</a
                             >
                         </li>
+
                         <li>
                             <a href="/">Create</a>
                         </li>
+
                         <li><a href="/">Home</a></li>
+
                         <li style="border: none">
                             <a href="/"
                                 ><img src="images/msg_icon.png" width="20"
                             /></a>
+                        </li>
+                        <li style="border: none">
                             <a href="/"
-                                ><img
-                                    src="images/alert_icon.jpg"
-                                    width="35" /></a
-                            ><a
+                                ><img src="images/alert_icon.jpg" width="35"
+                            /></a>
+                        </li>
+                        <li style="border: none">
+                            <a
                                 ><img
                                     src="images/add-friend-icon.png"
-                                    width="20" /></a
-                            ><a href="/"
+                                    width="20"
+                            /></a>
+                        </li>
+                        <li style="border: none">
+                            <a href="/"
                                 ><img src="images/info-icon.png" width="20"
                             /></a>
                         </li>
@@ -256,7 +125,53 @@
                         </div>
                     </div>
                 </section>
-                <section></section>
+                <section class="view-post">
+                    <div class="post-title">
+                        <div>
+                            <img
+                                src="images/avatar.png"
+                                alt="avatar"
+                                width="40"
+                            />
+                        </div>
+                        <div>
+                            <a href="/" class="name-user">Nguyễn Văn Tèo</a
+                            ><br />
+                            <p class="time-post">a minute ago</p>
+                        </div>
+
+                        <div>
+                            <i
+                                class="fa-solid fa-ellipsis"
+                                style="vertical-align: middle"
+                            ></i>
+                        </div>
+                    </div>
+
+                    <div class="post-content">
+                        <p>
+                            Hi, Hôm nay thời tiết thật là đẹp phải không các
+                            bợn?
+                        </p>
+                        <div class="img-post-1"></div>
+                        <div class="img-post-2"></div>
+                        <div class="img-post-3"></div>
+                    </div>
+                    <div class="post-footer">
+                        <div class="post-footer-detail">
+                            <i class="fa-regular fa-thumbs-up"></i
+                            ><span>199</span>
+                        </div>
+                        <div class="post-footer-detail">
+                            <i class="fa-regular fa-message"></i>
+                            <span>25</span>
+                        </div>
+                        <div class="post-footer-detail">
+                            <i class="fa-solid fa-share"></i>
+                            <span>5</span>
+                        </div>
+                    </div>
+                </section>
                 <section></section>
                 <section></section>
             </div>
@@ -267,12 +182,49 @@
                         <a href="/" class="title-right">See all</a>
                     </div>
 
-                    <div class="section-content"></div>
+                    <div class="section-content">
+                        <a href="/" target="_blank">
+                            <div class="icon-story">
+                                <div class="img-story-add"></div>
+                            </div>
+                        </a>
+                        <a href="/" target="_blank">
+                            <div class="icon-story">
+                                <div class="img-story-1"></div>
+                            </div>
+                        </a>
+                        <a href="/" target="_blank">
+                            <div class="icon-story">
+                                <div class="img-story-2"></div>
+                            </div>
+                        </a>
+                        <a href="/" target="_blank">
+                            <div class="icon-story">
+                                <div class="img-story-3"></div>
+                            </div>
+                        </a>
+                    </div>
                 </section>
                 <section>
-                    <div class="section-title">
+                    <div class="section-title recently-viewed">
                         <h5>Recently Viewed</h5>
-                        <div class="section-content"></div>
+                        <div class="section-content">
+                            <a href="/" target="_blank" class="img-viewed-1"
+                                ><p>Pp 72.000</p></a
+                            >
+
+                            <a href="/" target="_blank" class="img-viewed-2">
+                                <p>Pp 172.000</p>
+                            </a>
+
+                            <a href="/" target="_blank" class="img-viewed-3">
+                                <p>Pp 272.000</p>
+                            </a>
+
+                            <a href="/" target="_blank" class="img-viewed-4">
+                                <p>Pp 472.000</p>
+                            </a>
+                        </div>
                     </div>
                 </section>
                 <section>
